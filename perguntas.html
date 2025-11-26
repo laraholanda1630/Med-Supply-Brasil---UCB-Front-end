@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perguntas e Avaliações — MedSupply Brasil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html" aria-label="MedSupply Brasil — Home">
+        <img src="ChatGPT_Image_13_de_nov._de_2025__15_00_05-removebg-preview.png" alt="Logo MedSupply Brasil"
+          height="56">
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+        aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="navbar" role="navigation">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="perguntas.html" class="active">Avaliações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =================== MAIN =================== -->
+  <main>
+    <br><br>
+
+    <!-- ================= FORMULÁRIO DE AVALIAÇÃO ================= -->
+    <section id="avaliacao" class="section contact">
+      <div class="container contact-grid">
+
+        <div class="contact-card">
+          <h2 class="title">Deixe sua <span>Avaliação</span></h2>
+          <p>Conte como foi sua experiência com a MedSupply Brasil.</p>
+
+          <form id="review-form" class="form" novalidate>
+
+            <div class="form-row">
+              <label for="review-name">Nome</label>
+              <input id="review-name" name="review-name" type="text" required placeholder="Seu nome ou empresa">
+            </div>
+
+            <div class="form-row">
+              <label for="review-message">Avaliação</label>
+              <textarea id="review-message" name="review-message" rows="4" required
+                placeholder="Como foi sua experiência?"></textarea>
+            </div>
+
+            <div class="form-row form-actions">
+              <button type="submit" class="btn">Enviar Avaliação</button>
+              <button type="reset" class="btn ghost">Limpar</button>
+            </div>
+
+            <p id="review-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <h3>Por que avaliar?</h3>
+          <p>Suas opiniões nos ajudam a melhorar nossos serviços e entender melhor suas necessidades.</p>
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- ================= AVALIAÇÕES ================= -->
+    <section id="reviews" class="section reviews">
+      <div class="container">
+        <h2 class="title">O que nossos <span>clientes</span> dizem</h2>
+
+        <div class="reviews-grid">
+          <blockquote class="review-card">
+            <p>Entrega rápida e ótimo atendimento. Recomendo a MedSupply Brasil para revendedores.</p>
+            <footer>— DrogaFarma LTDA</footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <p>Produtos conforme certificado e com bom preço. Facilidade no relacionamento comercial.</p>
+            <footer>— Farmácia Central</footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <p>Atendimento personalizado e logística eficiente. Excelente parceiro.</p>
+            <footer>— RedeSaúde</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= PERGUNTAS FREQUENTES ================= -->
+    <section id="faq" class="section" style="padding-top: 4rem;">
+      <div class="container">
+        <h2 class="title">Perguntas <span>Frequentes</span></h2>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Como funciona a entrega?</summary>
+            <p>A entrega ocorre em até 24h no DF e pode variar por região.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Vocês vendem para hospitais?</summary>
+            <p>Sim! Atendemos hospitais, clínicas e consultórios.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Os produtos são originais?</summary>
+            <p>Todos os produtos são 100% certificados pela ANVISA.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MedSupply Brasil — Todos os direitos reservados UCB - Site feito por: Lara Leal,
+        Leonardo Marques e Pedro Soares. </p>
+      <nav class="footer-nav">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos</a>
+      </nav>
+    </div>
+  </footer>
+
+
+
+  <!-- =================== SCRIPTS =================== -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* MENU MOBILE */
+    const navToggle = document.getElementById('nav-toggle');
+    const primaryNav = document.getElementById('primary-nav');
+
+    navToggle.addEventListener('click', () => {
+      const opened = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!opened));
+      primaryNav.classList.toggle('open');
+    });
+
+    /* FORM AVALIAÇÃO */
+    const reviewForm = document.getElementById('review-form');
+    const reviewStatus = document.getElementById('review-status');
+
+    reviewForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = reviewForm["review-name"].value.trim();
+      const message = reviewForm["review-message"].value.trim();
+
+      if (!name || !message) {
+        reviewStatus.textContent = "Preencha todos os campos para enviar sua avaliação.";
+        reviewStatus.className = "form-status error";
+        return;
+      }
+
+      reviewStatus.textContent = "Avaliação enviada! Obrigado pelo seu feedback.";
+      reviewStatus.className = "form-status success";
+      reviewForm.reset();
+    });
+  </script>
+
+
+</body>
+
+</html>

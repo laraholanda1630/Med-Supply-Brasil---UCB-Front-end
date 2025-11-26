@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MedSupply Brasil — Revenda e Distribuição</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html" aria-label="MedSupply Brasil — Home">
+        <img src="ChatGPT_Image_13_de_nov._de_2025__15_00_05-removebg-preview.png" alt="Logo MedSupply Brasil" height="56">
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+        aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="navbar" role="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="perguntas.html">Avaliações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <h1>MedSupply Brasil</h1>
+          <p class="lead">Excelência em distribuição e revenda de produtos farmacêuticos — qualidade, segurança e
+            agilidade em cada entrega.</p>
+
+          <p class="hero-cta">
+            <a class="btn" href="produtos.html">Comprar agora</a>
+            <a class="btn ghost" href="contato.html">Pedir orçamento</a>
+          </p>
+
+          <ul class="hero-features">
+            <li>Entrega em todo o Brasil</li>
+            <li>Produtos certificados</li>
+            <li>Atendimento personalizado</li>
+          </ul>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <img src="farmaceutico-no-trabalho_23-2150600099.avif" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="container">
+        <h2 class="title">Alguns dos nossos <span>Produtos</span></h2>
+
+        <div class="products-grid" aria-live="polite">
+
+          <article class="card product-card">
+            <img src="remedio.png" alt="Medicamento genérico" class="product-img">
+            <div class="card-body">
+              <h3>Medicamento Genérico</h3>
+              <p class="muted">Embalagens diversas | Fornecedor certificado</p>
+              <div class="card-actions">
+                <span class="price">Sob consulta</span>
+                <a class="btn small" href="contato.html">Solicitar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <img src="suplemento.jpg" alt="Suplemento vitamínico" class="product-img">
+            <div class="card-body">
+              <h3>Suplemento Vitamínico</h3>
+              <p class="muted">Alta qualidade | Atendimento especializado</p>
+              <div class="card-actions">
+                <span class="price">Sob consulta</span>
+                <a class="btn small" href="contato.html">Solicitar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <img src="cosmeticos.png" alt="Dermocosmético" class="product-img">
+            <div class="card-body">
+              <h3>Dermocosmético</h3>
+              <p class="muted">Linha premium | Em estoque</p>
+              <div class="card-actions">
+                <span class="price">Sob consulta</span>
+                <a class="btn small" href="contato.html">Solicitar</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="why container">
+      <h2 class="section-title">Por que escolher a MedSupply Brasil</h2>
+
+      <div class="why-grid">
+        <article class="why-card">
+          <div class="icon">🚚</div>
+          <h3>Entrega rápida</h3>
+          <p>Logística otimizada para entregas ágeis e seguras.</p>
+        </article>
+
+        <article class="why-card">
+          <div class="icon">✔️</div>
+          <h3>Produtos certificados</h3>
+          <p>Registro e procedência garantidos.</p>
+        </article>
+
+        <article class="why-card">
+          <div class="icon">🤝</div>
+          <h3>Parcerias confiáveis</h3>
+          <p>Distribuição para farmácias, clínicas e hospitais.</p>
+        </article>
+
+        <article class="why-card">
+          <div class="icon">📦</div>
+          <h3>Estoque atualizado</h3>
+          <p>Reabastecimento contínuo para evitar faltas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+
+        <div class="contact-card">
+          <h2 class="title">Fale <span>conosco</span></h2>
+          <p>Preencha o formulário e nosso time comercial retornará em até 1 dia útil.</p>
+
+          <form id="contact-form" class="form" novalidate>
+            <div class="form-row">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" required placeholder="Seu nome">
+            </div>
+
+            <div class="form-row">
+              <label for="company">Empresa</label>
+              <input id="company" name="company" type="text" placeholder="Farmácia / Drogaria">
+            </div>
+
+            <div class="form-row">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required placeholder="contato@exemplo.com">
+            </div>
+
+            <div class="form-row">
+              <label for="message">Mensagem / Pedido</label>
+              <textarea id="message" name="message" rows="5" required
+                placeholder="Descreva seu pedido ou dúvida"></textarea>
+            </div>
+
+            <div class="form-row form-actions">
+              <button type="submit" class="btn">Enviar</button>
+              <button type="reset" class="btn ghost">Limpar</button>
+            </div>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <h3>Informações</h3>
+          <p><strong>Endereço:</strong> Brasília, DF — Brasil</p>
+          <p><strong>Telefone:</strong> (61) 99683-2671</p>
+          <p><strong>E-mail:</strong> comercial@medsupplybrasil.com</p>
+
+          <div class="small-cta">
+            <a class="btn small" href="mailto:comercial@medsupplybrasil.com">Enviar e-mail</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MedSupply Brasil — Todos os direitos reservados UCB - Site feito por: Lara Leal,
+        Leonardo Marques e Pedro Soares. </p>
+      <nav class="footer-nav">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('nav-toggle');
+    const primaryNav = document.getElementById('primary-nav');
+
+    navToggle.addEventListener('click', () => {
+      const opened = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!opened));
+      primaryNav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+
+</html>
